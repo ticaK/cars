@@ -18,7 +18,7 @@ class CarsController extends Controller
     public function index()
     {
         $cars = Car::all();
-        return view('index',compact('cars'));
+        return view('/cars',compact('cars'));
     }
 
     /**
@@ -48,9 +48,11 @@ class CarsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+
+    public function show($id)
     {
-        return view('/show',compact('post'));
+        $car = Car::find($id);
+        return view('/show', compact('car'));
         
     }
 

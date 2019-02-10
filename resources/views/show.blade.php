@@ -2,18 +2,19 @@
 @extends('layouts.master')
 
     @section('title')
-    {{$car->title}}
+
+        {{$car->title}}
+    
     @endsection
     
     
     @section('content')
 
-    <div>
-        <h1>{{$car->title}}</h1>
-        <p>{{$car->producer}}</p>
-        <p>{{$car->number_of_dors}}</p>
-        
-    </div>
+        <div>
+            <h1>{{$car->title}}</h1>
+            <p>Producer: {{$car->producer}}</p>
+            <p>Number of doors: {{$car->number_of_doors}}</p>   
+        </div>
 
     @endsection
     
